@@ -19,8 +19,8 @@
   <dependencyManagement>
     <dependencies>
       <dependency>
-        <groupId>com.xpn.xwiki.platform</groupId>
-        <artifactId>xwiki-core</artifactId>
+        <groupId>org.xwiki.platform</groupId>
+        <artifactId>xwiki-platform-oldcore</artifactId>
         <version>4.1.1</version>
       </dependency>
       <dependency>
@@ -29,18 +29,28 @@
 	      <version>12.0</version>
       </dependency>
       <dependency>
+        <groupId>org.xwiki.commons</groupId>
+        <artifactId>xwiki-commons-component-api</artifactId>
+        <version>4.1.1</version>
+      </dependency>
+      <dependency>
+        <groupId>org.xwiki.commons</groupId>
+        <artifactId>xwiki-commons-test</artifactId>
+        <version>4.1.1</version>
+      </dependency>
+      <dependency>
         <groupId>org.xwiki.platform</groupId>
-        <artifactId>xwiki-core-shared-tests</artifactId>
+        <artifactId>xwiki-platform-mailsender</artifactId>
         <version>4.1.1</version>
       </dependency>
       <dependency>
-        <groupId>com.xpn.xwiki.platform.plugins</groupId>
-        <artifactId>xwiki-plugin-mailsender</artifactId>
+        <groupId>org.xwiki.platform</groupId>
+        <artifactId>xwiki-platform-skin-api</artifactId>
         <version>4.1.1</version>
       </dependency>
       <dependency>
-        <groupId>com.xpn.xwiki.platform.plugins</groupId>
-        <artifactId>xwiki-plugin-skinx</artifactId>
+        <groupId>org.xwiki.platform</groupId>
+        <artifactId>xwiki-platform-skin-skinx</artifactId>
         <version>4.1.1</version>
       </dependency>
       <dependency>
