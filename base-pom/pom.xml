@@ -13,6 +13,7 @@
   <properties>
     <platform.core.version>1.0</platform.core.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <xwiki.dependency.version>4.1.3</xwiki.dependency.version>
   </properties>
   <dependencies>
   </dependencies>
@@ -21,37 +22,37 @@
       <dependency>
         <groupId>org.xwiki.platform</groupId>
         <artifactId>xwiki-platform-oldcore</artifactId>
-        <version>4.1.3</version>
-      </dependency>
-      <dependency>
-	      <groupId>com.google.guava</groupId>
-	      <artifactId>guava</artifactId>
-	      <version>12.0</version>
+        <version>${xwiki.dependency.version}</version>
       </dependency>
       <dependency>
         <groupId>org.xwiki.commons</groupId>
         <artifactId>xwiki-commons-component-api</artifactId>
-        <version>4.1.3</version>
+        <version>${xwiki.dependency.version}</version>
       </dependency>
       <dependency>
         <groupId>org.xwiki.commons</groupId>
         <artifactId>xwiki-commons-test</artifactId>
-        <version>4.1.3</version>
+        <version>${xwiki.dependency.version}</version>
       </dependency>
       <dependency>
         <groupId>org.xwiki.platform</groupId>
         <artifactId>xwiki-platform-mailsender</artifactId>
-        <version>4.1.3</version>
+        <version>${xwiki.dependency.version}</version>
       </dependency>
       <dependency>
         <groupId>org.xwiki.platform</groupId>
         <artifactId>xwiki-platform-skin-api</artifactId>
-        <version>4.1.3</version>
+        <version>${xwiki.dependency.version}</version>
       </dependency>
       <dependency>
         <groupId>org.xwiki.platform</groupId>
         <artifactId>xwiki-platform-skin-skinx</artifactId>
-        <version>4.1.3</version>
+        <version>${xwiki.dependency.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.google.guava</groupId>
+        <artifactId>guava</artifactId>
+        <version>12.0</version>
       </dependency>
       <dependency>
         <groupId>javax.servlet</groupId>
