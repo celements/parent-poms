@@ -56,6 +56,28 @@
       <artifactId>xwiki-commons-test</artifactId>
       <scope>test</scope>
     </dependency>
+
+    <!-- legacy components -->
+    <dependency>
+      <groupId>org.xwiki.commons</groupId>
+      <artifactId>xwiki-commons-legacy-configuration</artifactId>
+      <version>${xwiki.dependency.version}</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.xwiki.commons</groupId>
+      <artifactId>xwiki-commons-legacy-component-api</artifactId>
+      <version>${xwiki.dependency.version}</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.xwiki.commons</groupId>
+      <artifactId>xwiki-commons-legacy-component-default</artifactId>
+      <version>${xwiki.dependency.version}</version>
+      <scope>provided</scope>
+    </dependency>
+
+    <!-- general dependencies -->
     <dependency>
       <groupId>com.google.guava</groupId>
       <artifactId>guava</artifactId>
