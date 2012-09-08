@@ -13,7 +13,7 @@
   <properties>
     <platform.core.version>1.0</platform.core.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <xwiki.dependency.version>4.1.3</xwiki.dependency.version>
+    <xwiki.dependency.version>4.1.4</xwiki.dependency.version>
   </properties>
   <dependencies>
   </dependencies>
