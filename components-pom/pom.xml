@@ -53,7 +53,7 @@
     </dependency>
     <dependency>
       <groupId>org.xwiki.commons</groupId>
-      <artifactId>xwiki-commons-test</artifactId>
+      <artifactId>xwiki-commons-test-component</artifactId>
       <scope>test</scope>
     </dependency>
 
