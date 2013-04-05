@@ -59,7 +59,11 @@
         <artifactId>servlet-api</artifactId>
         <version>2.4</version>
       </dependency>
-
+			<dependency>
+			  <groupId>javax.inject</groupId>
+			  <artifactId>javax.inject</artifactId>
+			  <version>1</version>
+			</dependency>
       <!-- Everybody logs -->
 	    <dependency>
 	      <groupId>org.xwiki.commons</groupId>
