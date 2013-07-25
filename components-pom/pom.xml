@@ -4,17 +4,18 @@
   <parent>
     <groupId>com.celements</groupId>
     <artifactId>base-pom</artifactId>
-    <version>3.1-SNAPSHOT</version>
+    <version>4.0-SNAPSHOT</version>
   </parent>
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.celements</groupId>
   <artifactId>celements</artifactId>
-  <version>3.1-SNAPSHOT</version>
+  <version>4.0-SNAPSHOT</version>
   <packaging>pom</packaging>
   <description>Celements Main POM</description>
   <scm>
-    <developerConnection>scm:svn:svn+ssh://dev1.synventis.com:10022/svn/com_celements/trunk</developerConnection>
-    <connection>scm:svn:svn+ssh://dev1.synventis.com:10022/svn/com_celements/trunk</connection>
+    <connection>scm:git:git@github.com:celements/parent-poms.git</connection>
+    <developerConnection>scm:git:git@github.com:celements/parent-poms.git</developerConnection>
+    <url>https://github.com/celements/parent-poms</url>
   </scm>
   <properties>
     <!--
