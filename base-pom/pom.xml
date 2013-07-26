@@ -30,6 +30,21 @@
         <version>${xwiki.dependency.version}</version>
       </dependency>
       <dependency>
+	<groupId>org.xwiki.commons</groupId>
+	<artifactId>xwiki-commons-observation-api</artifactId>
+	<version>${xwiki.dependency.version}</version>
+      </dependency>
+      <dependency>
+	<groupId>org.xwiki.commons</groupId>
+	<artifactId>xwiki-commons-observation-local</artifactId>
+	<version>${xwiki.dependency.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.xwiki.platform</groupId>
+        <artifactId>xwiki-platform-observation-remote</artifactId>
+        <version>${xwiki.dependency.version}</version>
+      </dependency>
+      <dependency>
         <groupId>org.xwiki.commons</groupId>
         <artifactId>xwiki-commons-test-component</artifactId>
         <version>${xwiki.dependency.version}</version>
