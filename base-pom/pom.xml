@@ -1,4 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ *
+ * See the NOTICE file distributed with this work for additional
+ * information regarding copyright ownership.
+ *
+ * This is free software; you can redistribute it and/or modify it
+ * under the terms of the GNU Lesser General Public License as
+ * published by the Free Software Foundation; either version 2.1 of
+ * the License, or (at your option) any later version.
+ *
+ * This software is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * Lesser General Public License for more details.
+ *
+ * You should have received a copy of the GNU Lesser General Public
+ * License along with this software; if not, write to the Free
+ * Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA
+ * 02110-1301 USA, or see the FSF site: http://www.fsf.org.
+ *
+-->
+
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
@@ -8,7 +31,10 @@
   <packaging>pom</packaging>
   <description>Celements Master Root POM</description>
   <scm>
-    <developerConnection>scm:svn:svn+ssh://dev1.synventis.com:10022/svn/com_celements/trunk</developerConnection>
+    <connection>scm:git:git://github.com/celements/parent-poms</connection>
+    <developerConnection>scm:git:git@github.com:celements/parent-poms.git</developerConnection>
+    <url>https://github.com/celements/parent-poms</url>
+    <tag>HEAD</tag>
   </scm>
   <properties>
     <platform.core.version>1.0</platform.core.version>
@@ -49,6 +75,11 @@
         <artifactId>xwiki-platform-skin-skinx</artifactId>
         <version>${xwiki.dependency.version}</version>
       </dependency>
+			<dependency>
+			  <groupId>commons-net</groupId>
+			  <artifactId>commons-net</artifactId>
+			  <version>3.3</version>
+			</dependency>
       <dependency>
         <groupId>com.google.guava</groupId>
         <artifactId>guava</artifactId>
@@ -82,25 +113,25 @@
       <dependency>
         <groupId>org.slf4j</groupId>
         <artifactId>slf4j-api</artifactId>
-        <version>1.7.5</version>
+        <version>1.7.7</version>
       </dependency>
       <!-- SLF4J implementation we use -->
 			<dependency> 
 			  <groupId>org.slf4j</groupId>
 			  <artifactId>slf4j-log4j12</artifactId>
-			  <version>1.7.5</version>
+			  <version>1.7.7</version>
 			</dependency>
       <!-- External libraries using Commons Logging will delegate to SLF4J -->
       <dependency>
         <groupId>org.slf4j</groupId>
         <artifactId>jcl-over-slf4j</artifactId>
-        <version>1.7.5</version>
+        <version>1.7.7</version>
       </dependency>
       <!-- External libraries using Log4J will delegate to SLF4J -->
       <dependency>
         <groupId>org.slf4j</groupId>
         <artifactId>log4j-over-slf4j</artifactId>
-        <version>1.7.5</version>
+        <version>1.7.7</version>
       </dependency>
 
       <dependency>
@@ -184,12 +215,26 @@
 	      <plugin>
 	        <groupId>org.apache.maven.plugins</groupId>
 	        <artifactId>maven-surefire-plugin</artifactId>
-	        <version>2.14</version>
+	        <version>2.16</version>
 	      </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-source-plugin</artifactId>
+          <version>2.2.1</version>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-javadoc-plugin</artifactId>
+          <version>2.9.1</version>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-deploy-plugin</artifactId>
+          <version>2.8.1</version>
         <plugin>
 	        <groupId>org.apache.maven.plugins</groupId>
 	        <artifactId>maven-war-plugin</artifactId>
-	        <version>2.3</version>
+	        <version>2.4</version>
         </plugin>
         <plugin>
           <artifactId>maven-shade-plugin</artifactId>
@@ -197,12 +242,7 @@
         </plugin>
         <plugin>
           <artifactId>maven-release-plugin</artifactId>
-          <version>2.4.1</version>
-          <configuration>
-            <tagBase>
-              svn:svn+ssh://dev1.synventis.com:10022/svn/com_celements/tags
-            </tagBase>
-          </configuration>
+          <version>2.4.2</version>
         </plugin>
         <plugin>
           <artifactId>maven-assembly-plugin</artifactId>
@@ -215,11 +255,11 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-compiler-plugin</artifactId>
-          <version>3.0</version>
+          <version>3.1</version>
           <configuration>
-            <complianceLevel>1.6</complianceLevel>
-            <source>1.6</source>
-            <target>1.6</target>
+            <complianceLevel>1.7</complianceLevel>
+            <source>1.7</source>
+            <target>1.7</target>
             <encoding>${project.build.sourceEncoding}</encoding>
           </configuration>
         </plugin>
@@ -257,10 +297,10 @@
         <plugin>
           <groupId>org.codehaus.mojo</groupId>
           <artifactId>aspectj-maven-plugin</artifactId>
-          <version>1.4</version>
+          <version>1.5</version>
           <configuration>
-            <source>1.6</source>
-            <complianceLevel>1.6</complianceLevel>
+            <source>1.7</source>
+            <complianceLevel>1.7</complianceLevel>
           </configuration>
           <executions>
             <execution>
@@ -305,12 +345,12 @@
     <extension>
       <groupId>org.apache.maven.wagon</groupId>
       <artifactId>wagon-ftp</artifactId>
-      <version>2.4</version>
+      <version>2.6</version>
     </extension>
     <extension>
       <groupId>org.apache.maven.wagon</groupId>
       <artifactId>wagon-ssh-external</artifactId>
-      <version>2.4</version>
+      <version>2.6</version>
     </extension>
   </extensions>
   </build>
